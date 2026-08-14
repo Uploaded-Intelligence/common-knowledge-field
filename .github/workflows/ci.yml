@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  control-plane:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify canonical state
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            AGENTS.md
+            docs/WINNING.md
+            docs/PROGRESS.md
+            docs/DECISIONS.md
+            docs/RISKS.md
+            docs/ARCHITECTURE.md
+            docs/ROADMAP.md
+            docs/RUNBOOK.md
+            docs/REVIEW.md
+            docs/RESEARCH_MAP.md
+            docs/THREAT_MODEL.md
+          )
+          for file in "${required[@]}"; do
+            test -s "$file"
+          done
+          if rg -n '\b(TBD|TODO|FIXME)\b' "${required[@]}"; then
+            echo 'Canonical state contains placeholders.' >&2
+            exit 1
+          fi
+
+  application:
+    if: ${{ hashFiles('package.json') != '' }}
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify
+
