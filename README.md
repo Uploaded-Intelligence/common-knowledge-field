@@ -8,9 +8,8 @@ This repository is an early private pilot. The canonical purpose and acceptance 
 
 ## Current status
 
-M0 control-plane bootstrap is in progress. The first executable outcome is a replayable living-field vertical slice; Beeper ingestion, local inference, and shared fields follow only after that slice passes its gate.
+M0 control-plane bootstrap is locally verified and the private GitHub repository exists. M1 is the first executable outcome: a replayable living-field vertical slice. Beeper ingestion, local inference, and shared fields follow only after that slice passes its gate.
 
 ## Licence
 
 AGPL-3.0-only. Third-party components retain their own licences and notices.
-

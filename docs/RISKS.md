@@ -14,4 +14,4 @@
 | Deletion semantics mislead | High | Tombstone deleted source evidence and disclose that downloaded shared material cannot be remotely erased. |
 | Dependency/licence contamination | Medium | SPDX inventory, exact pins, notices, no EchoMind/tldraw code, review adapted upstream code. |
 | Premature group expansion | High | V2 work is blocked until the dyadic M4 gate passes. |
-
+| Private GitHub tier lacks branch protection and secret scanning | Medium | Keep repository private; enforce worktree/PR/review gates operationally, run local secret scans, and reconsider GitHub plan before external collaboration. Do not make the repository public as a workaround. |

@@ -10,8 +10,9 @@ coverage/
 playwright-report/
 test-results/
 .worktrees/
+work/
+outputs/
 *.db
 *.db-shm
 *.db-wal
 *.log
-
