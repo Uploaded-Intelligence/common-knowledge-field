@@ -12,7 +12,7 @@ jobs:
   control-plane:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Verify canonical state
         shell: bash
         run: |
@@ -41,7 +41,7 @@ jobs:
   application:
     runs-on: macos-14
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Detect application workspace
         id: application
         shell: bash
