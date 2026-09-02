@@ -1,6 +1,6 @@
 # Progress
 
-Last updated: 2026-08-14
+Last updated: 2026-09-02
 
 ## Current milestone
 
@@ -10,17 +10,18 @@ M1 — Replayable living-field vertical slice.
 
 - Purpose and acceptance contract: verified by the global harness.
 - Local repository: initial control-plane commit on `main`.
-- GitHub remote: private `Uploaded-Intelligence/common-knowledge-field` created and pushed.
+- GitHub remote: `Uploaded-Intelligence/common-knowledge-field` created and pushed; public visibility explicitly authorised on 2026-09-02 to enable community contribution.
 - Dependency vulnerability alerts: enabled.
-- GitHub branch protection and secret scanning: unavailable on the current private-repository account tier; local gates and PR discipline remain mandatory.
-- M1 application: ready for isolated implementation.
+- GitHub public-repository protection, security features, and contribution routes: publication verification pending at this checkpoint.
+- M1 application: active in the isolated `codex/m1-living-field` worktree.
+- M1 renderer-neutral core and 100-turn replay: 38/38 Node TypeScript tests pass; second-pass review findings remain open and prevent checkpoint acceptance.
 
 ## Next checkpoint
 
-1. Create an isolated implementation worktree for M1.
-2. Build the field schema and fixture replay contract test-first.
-3. Build the stable spatial and outline projections test-first.
-4. Collect browser, accessibility, performance, spec, and code-quality evidence.
+1. Publish and verify the contributor-facing GitHub repository and security settings.
+2. Resolve the remaining M1 semantic-review findings test-first.
+3. Install the pinned dependencies when external dependency access is available.
+4. Build and verify the React Flow spatial and outline application.
 
 ## Evidence ledger
 
@@ -33,3 +34,4 @@ M1 — Replayable living-field vertical slice.
 | 2026-08-14 | M0 | Git identity and commit inspection | Exact Uploaded-Intelligence author and committer verified |
 | 2026-08-14 | M0 | Private GitHub remote | Created and initial `main` pushed |
 | 2026-08-14 | M0 | GitHub security settings | Vulnerability alerts enabled; branch protection and secret scanning tier-blocked |
+| 2026-09-02 | Public collaboration | Tracked-file credential-pattern scan | No credential-like material found; synthetic/consented-data rule retained |

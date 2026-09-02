@@ -14,4 +14,5 @@
 | Deletion semantics mislead | High | Tombstone deleted source evidence and disclose that downloaded shared material cannot be remotely erased. |
 | Dependency/licence contamination | Medium | SPDX inventory, exact pins, notices, no EchoMind/tldraw code, review adapted upstream code. |
 | Premature group expansion | High | V2 work is blocked until the dyadic M4 gate passes. |
-| Private GitHub tier lacks branch protection and secret scanning | Medium | Keep repository private; enforce worktree/PR/review gates operationally, run local secret scans, and reconsider GitHub plan before external collaboration. Do not make the repository public as a workaround. |
+| Public contribution leaks relational data | Critical | The public repository contains source and synthetic fixtures only. Contribution guidance prohibits real transcripts, participant identifiers, screenshots, credentials, and private exports; security-sensitive findings use private reporting. Any leak triggers immediate containment and history-remediation review. |
+| Public GitHub governance is underconfigured | Medium | Require pull requests, CI, CODEOWNERS review, private vulnerability reporting, and security scanning where GitHub permits them; keep local review gates as defence in depth. |

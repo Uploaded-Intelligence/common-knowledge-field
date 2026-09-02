@@ -1,0 +1,43 @@
+name: Feature proposal
+description: Propose a scoped improvement tied to CKF's purpose
+title: "[Proposal]: "
+labels: [proposal]
+body:
+  - type: markdown
+    attributes:
+      value: Please connect the proposal to docs/WINNING.md. Group, mobile, and expansion work remains gated behind validation of the dyadic live loop.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Human problem
+      description: What cognitive or relational cost would this reduce?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Observable outcome
+      description: What would become visibly or measurably better?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Smallest viable scope
+      description: What is the smallest independently verifiable change?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Acceptance evidence
+      description: How should the result be verified?
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Privacy, safety, and rollback
+      description: What could go wrong, and how can the change be disabled or reversed?
+    validations:
+      required: true

@@ -1,5 +1,9 @@
 # Decisions
 
+## D-009 — Public repository, private relational data
+
+On 2026-09-02 the product owner explicitly authorised changing the GitHub repository from private to public so outside contributors can participate. Source code, architecture, issues, and development discussion may be public. Real conversation content, participant identifiers, pilot data, credentials, model artefacts containing source text, and private field exports must never be committed or posted publicly. This does not authorise a public app deployment, public field publishing, or a change to CKF's private-first product model.
+
 ## D-001 — Purpose before platform
 
 CKF is a living relational feedback instrument, not a graph visualiser or AI chat assistant. Every feature must improve the live message-to-feedback loop.
@@ -31,4 +35,3 @@ Pin Automerge Repo 2.5.6 rather than the 2.6 alpha line. Record all pins and upg
 ## D-008 — Pilot runtime
 
 Ollama may accelerate M2 research, but the pilot must use a managed local `llama.cpp`-compatible runtime and model download.
-

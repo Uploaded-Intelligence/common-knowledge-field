@@ -1,0 +1,42 @@
+name: Bug report
+description: Report reproducible incorrect behaviour using synthetic data
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private-message content, participant identifiers, credentials, capability links, or security vulnerabilities. Report vulnerabilities privately through SECURITY.md.
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behaviour
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: Which documented outcome or invariant should hold?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Synthetic reproduction
+      description: Provide the smallest reproduction using synthetic or explicitly public data.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy confirmation
+      options:
+        - label: This report contains no private conversation data, participant identifiers, credentials, or security-sensitive details.
+          required: true

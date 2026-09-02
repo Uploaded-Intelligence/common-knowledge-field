@@ -34,7 +34,6 @@ pnpm verify
 
 ## Deployment and rollback
 
-- No production or public deployment is authorised.
+- The source repository may be public under D-009. No production/public application deployment or publication of conversation fields is authorised.
 - Pilot builds are signed only after explicit credential approval.
 - Each subsystem is feature-gated: semantic inference, Beeper live ingestion, sharing, and relay can be disabled independently.
-
