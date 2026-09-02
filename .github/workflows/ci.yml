@@ -52,7 +52,7 @@ jobs:
             echo "present=false" >> "$GITHUB_OUTPUT"
             echo "Application workspace not yet present; control-plane-only verification applies."
           fi
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         if: steps.application.outputs.present == 'true'
         with:
           run_install: false
