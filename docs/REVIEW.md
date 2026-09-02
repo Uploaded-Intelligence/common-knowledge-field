@@ -24,3 +24,4 @@ Blocking findings remain open here until fixed and reverified.
 - Pre-publication tracked-file inspection found no credential-like material or committed private transcript.
 - Contributor and security-reporting guidance must be present before visibility changes; GitHub visibility and security settings require post-change verification.
 - Public repository visibility does not authorise a public deployment or any publication of relational data.
+- Post-publication verification found that the existing CI workflow was rejected before job creation because application presence was tested at the job boundary. The fix moves detection into a step and conditionally runs application steps; branch protection remains blocked until a green remote run confirms the correction.

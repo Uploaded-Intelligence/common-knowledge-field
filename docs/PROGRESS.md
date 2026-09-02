@@ -12,7 +12,9 @@ M1 — Replayable living-field vertical slice.
 - Local repository: initial control-plane commit on `main`.
 - GitHub remote: `Uploaded-Intelligence/common-knowledge-field` created and pushed; public visibility explicitly authorised on 2026-09-02 to enable community contribution.
 - Dependency vulnerability alerts: enabled.
-- GitHub public-repository protection, security features, and contribution routes: publication verification pending at this checkpoint.
+- GitHub repository visibility: public and remotely verified.
+- Private vulnerability reporting: enabled and remotely verified.
+- Public-repository CI: pre-existing job-boundary expression failure identified; corrective workflow commit pending verification before branch protection.
 - M1 application: active in the isolated `codex/m1-living-field` worktree.
 - M1 renderer-neutral core and 100-turn replay: 38/38 Node TypeScript tests pass; second-pass review findings remain open and prevent checkpoint acceptance.
 

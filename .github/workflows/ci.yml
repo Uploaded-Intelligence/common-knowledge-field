@@ -39,17 +39,29 @@ jobs:
           fi
 
   application:
-    if: ${{ hashFiles('package.json') != '' }}
     runs-on: macos-14
     steps:
       - uses: actions/checkout@v4
+      - name: Detect application workspace
+        id: application
+        shell: bash
+        run: |
+          if test -f package.json; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "Application workspace not yet present; control-plane-only verification applies."
+          fi
       - uses: pnpm/action-setup@v4
+        if: steps.application.outputs.present == 'true'
         with:
           run_install: false
       - uses: actions/setup-node@v4
+        if: steps.application.outputs.present == 'true'
         with:
           node-version: 24
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm verify
-
+      - if: steps.application.outputs.present == 'true'
+        run: pnpm install --frozen-lockfile
+      - if: steps.application.outputs.present == 'true'
+        run: pnpm verify
